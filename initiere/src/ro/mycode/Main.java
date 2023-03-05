@@ -13,10 +13,159 @@ public class Main {
        // locatariInBloc();
         //biblioteca();
         //familieMixta();
-        necesarScoala();
+        //necesarScoala();
+        //produseMagazin();
+        //zooAnimale();
+        //echipafotbal();
+        //karate();
+        //necesarSportivi();
+        obiectePescuit();
+
 
     }
 
+
+    public static void obiectePescuit(){
+
+        //creare de obiecte
+        Pescuit pescar1= new Pescuit();
+        Pescuit pescar2= new Pescuit();
+
+        pescar1.denechipament = "Undita 7 m";
+        pescar1.folositPentru ="Crap";
+        pescar1.cantitate = 1;
+        pescar1.pret = 567;
+
+        pescar2.denechipament = "Benzat mix concurs";
+        pescar2.folositPentru ="Momit la caras";
+        pescar2.cantitate = 22;
+        pescar2.pret = 154;
+
+
+
+
+        System.out.println(pescar1.afisarePescuit());
+        System.out.println(pescar2.afisarePescuit());
+
+
+    }
+    public static void necesarSportivi(){
+
+        //creare de obiecte
+
+        NecesarSport necesar1 = new NecesarSport();
+        NecesarSport necesar2 = new NecesarSport();
+
+        necesar1.denEchipament = "Tricou prezentare";
+        necesar1.material = "Anti vant";
+        necesar1.culoare = "Alb";
+        necesar1.marimea ="XXl";
+        necesar1.esential = true;
+
+        necesar2.denEchipament = "Pantalon 3 sferturi";
+        necesar2.material = "Bumbac";
+        necesar2.culoare = "Gri";
+        necesar2.marimea ="XL";
+        necesar2.esential = true;
+
+        System.out.println(necesar1.afisareNecesar());
+        System.out.println(necesar2.afisareNecesar());
+    }
+
+    public static void karate(){
+
+        //declarare obiecte
+
+        Karate karatist1 = new Karate();
+        Karate karatist2 = new Karate();
+
+
+        karatist1.numeSportiv = "Carina";
+        karatist1.sexul ="Feminin";
+        karatist1.culoareCentura = "Galbena cu tresa verde";
+        karatist1.nrMedalii = 9;
+        karatist1.denumireClub ="Puma";
+
+        karatist2.numeSportiv = "Ariana";
+        karatist2.sexul = "Masculin";
+        karatist2.culoareCentura ="Neagra";
+        karatist2.nrMedalii = 6;
+        karatist2.denumireClub = "Soimii Dej";
+
+        System.out.println(karatist1.afisareKarate());
+        System.out.println(karatist2.afisareKarate());
+
+    }
+    public static void echipafotbal(){
+
+        //declarare obiecte
+        EchipaFotbal jucator1 = new EchipaFotbal();
+        EchipaFotbal jucator2= new EchipaFotbal();
+
+        jucator1.numeJucator= "Aurel temisan";
+        jucator1.greutate = 75;
+        jucator1.inaltime = 198;
+        jucator1.nrTricou = 10;
+        jucator1.accidentat = false;
+
+        jucator2.numeJucator = "Gheorghe Hagi";
+        jucator2.greutate = 98;
+        jucator2.inaltime = 178;
+        jucator2.nrTricou = 12;
+        jucator2.accidentat = true;
+
+
+
+        System.out.println(jucator1.afisareJucator());
+        System.out.println(jucator2.afisareJucator());
+
+
+
+
+    }
+    public static void zooAnimale(){
+
+        //declarareobiecte
+        Zoo animal1 = new Zoo();
+        Zoo animal2 = new Zoo();
+
+        animal1.numeAnimal = "Leu";
+        animal1.varsta = 2;
+        animal1.nrCusca=23;
+        animal1.ceMananca = "Carne";
+        animal1.stareaDeSanatate = "Sanatos, il doare un canin";
+
+        animal2.numeAnimal = "Elefant";
+        animal2.varsta = 5;
+        animal2.nrCusca = 12;
+        animal2.ceMananca = "Vegetarian";
+        animal2.stareaDeSanatate = "Sanatos tun";
+
+        System.out.println(animal1.afisareZoo());
+        System.out.println(animal2.afisareZoo());
+    }
+
+    public static void produseMagazin(){
+
+        //creare obiecte
+        Magazin produs1 = new Magazin();
+        Magazin produs2 = new Magazin();
+
+        produs1.denumireProdus = "Faianta";
+        produs1.pret = 100;
+        produs1.nrBucati = 25;
+        produs1.raion = "Gresie si faianta";
+        produs1.alarmaStoc = false;
+
+        produs2.denumireProdus = "Adeziv gresie";
+        produs2.raion = "Adezivi si mortare";
+        produs2.nrBucati = 55;
+        produs2.pret = 25;
+        produs2.alarmaStoc = true;
+
+        System.out.println(produs1.afisareMagazin());
+        System.out.println(produs2.afisareMagazin());
+    }
 
     public static void necesarScoala(){
         //creare obiecte
