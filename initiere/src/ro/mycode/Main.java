@@ -1,25 +1,66 @@
 package ro.mycode;
 
+import ro.mycode.controllers.ControllUser;
 import ro.mycode.models.*;
 
 import java.net.SocketOption;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
 
 
-       // ciornaUser();
-       // masini();
-       // locatariInBloc();
-        //biblioteca();
-        //familieMixta();
-        //necesarScoala();
-        //produseMagazin();
-        //zooAnimale();
-        //echipafotbal();
-        //karate();
-        //necesarSportivi();
-        obiectePescuit();
+//
+//        //lista
+//
+//
+//        ArrayList<User> users = new ArrayList<>();//indexat zero
+//
+//        //adaugare de eleemnte  in lista
+//
+//
+//
+//
+//
+//        //Accesare
+//
+//
+//        //System.out.println(users.get(1).descriere());
+//
+//
+//
+//        //afisam tori userii
+//
+//        for (int i=0;i<4;i++){
+//            System.out.println(users.get(i).descriere());
+//        }
+
+        ControllUser controllUser= new ControllUser();
+
+
+        controllUser.load();
+
+
+
+        //controllUser.afisare();
+
+       //controllUser.afisareDupaAni(22);
+       //User user= controllUser.afisareDupaUsername("Sorin Stefan");
+
+
+        //System.out.println(user.descriere());
+
+        User user= controllUser.getCelMaiVarsnic();
+
+
+        System.out.println(user.descriere());
+
+
+
+
+
+
+
 
 
     }
@@ -288,43 +329,43 @@ public class Main {
 
 
 
-        User user1 = new User();
+        User fane = new User();
 
 
         //atrbuim valori
-        user1.id = 1;
-        user1.age = 12;
-        user1.userName = "stefanpartenie";
-        user1.name = "Stefan";
-        user1.city = "Sibiu";
-        user1.password = "ser44";
-        user1.phoneNumber = 12_12309;
+        fane.id = 1;
+        fane.age = 12;
+        fane.userName = "stefanpartenie";
+        fane.name = "Stefan";
+        fane.city = "Sibiu";
+        fane.password = "ser44";
+        fane.phoneNumber = 12_12309;
 
         //accesare
 
-        User user2 = new User();
+        User pahere2 = new User();
 
-        user2.id = 4;
-        user2.age = 32;
-        user2.userName = "paulmarius";
-        user2.name = "Paul";
-        user2.city = "Alba";
-        user2.password = "pool123";
-        user2.phoneNumber = 3243433;
+        pahere2.id = 4;
+        pahere2.age = 32;
+        pahere2.userName = "paulmarius";
+        pahere2.name = "Paul";
+        pahere2.city = "Alba";
+        pahere2.password = "pool123";
+        pahere2.phoneNumber = 3243433;
 
-        User user3 = new User();
+        User user5 = new User();
 
-        user3.id = 3;
-        user3.age = 22;
-        user3.userName = "virgilion";
-        user3.name = "ion";
-        user3.city = "Cigir";
-        user3.password = "ewew3";
-        user3.phoneNumber = 34343434;
+        user5.id = 3;
+        user5.age = 22;
+        user5.userName = "virgilion";
+        user5.name = "ion";
+        user5.city = "Cigir";
+        user5.password = "ewew3";
+        user5.phoneNumber = 34343434;
 
 
-        System.out.println(user3.descriere());
-        System.out.println(user2.descriere());
-        System.out.println(user1.descriere());
+        System.out.println(user5.descriere());
+        System.out.println(pahere2.descriere());
+        System.out.println(fane.descriere());
     }
 }
