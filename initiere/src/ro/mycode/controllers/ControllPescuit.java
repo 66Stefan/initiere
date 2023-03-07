@@ -80,7 +80,15 @@ public class ControllPescuit {
         }
         return null;
     }
+    public Pescuit afisareDupaPret(int pret){
 
+        for (int i=0; i<pescuit.size();i++){
+            if((pescuit.get(i).pret)==pret){
+                return pescuit.get(i);
+            }
+        }
+        return null;
+    }
 
 
 }

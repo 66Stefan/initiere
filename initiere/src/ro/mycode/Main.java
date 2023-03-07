@@ -57,8 +57,10 @@ public class Main {
     ControllPescuit controllPescuit = new ControllPescuit();
     controllPescuit.load();
     //controllPescuit.afisarePescari();
-        // controllPescuit.afisareMaiScumpDupa(5);
-    controllPescuit.afisareDupaDenumireEchipament("12")  ;
+         //controllPescuit.afisareMaiScumpDupa(5);
+
+    //controllPescuit.afisareDupaDenumireEchipament("12")  ;
+        //controllPescuit.afisareDupaPret(56);
 
 
 
