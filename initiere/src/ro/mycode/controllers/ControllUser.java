@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 public class ControllUser {
 
-    public ArrayList<User> users = new ArrayList<>();
+    public static ArrayList<User> users = new ArrayList<>();
 
 
-    public void load() {
+    public static void load() {
 
         User user1 = new User();
 

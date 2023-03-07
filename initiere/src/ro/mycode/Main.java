@@ -1,6 +1,7 @@
 package ro.mycode;
 
 import ro.mycode.controllers.ControllUser;
+import ro.mycode.controllers.ControllPescuit;
 import ro.mycode.models.*;
 
 import java.net.SocketOption;
@@ -35,33 +36,28 @@ public class Main {
 //            System.out.println(users.get(i).descriere());
 //        }
 
-        ControllUser controllUser= new ControllUser();
+       // ControllUser controllUser= new ControllUser();
 
 
-        controllUser.load();
-
+       // controllUser.load();
 
 
         //controllUser.afisare();
 
-       //controllUser.afisareDupaAni(22);
+       // ControllUser controllUser;
+        //controllUser.afisareDupaAni(22);
        //User user= controllUser.afisareDupaUsername("Sorin Stefan");
-
 
         //System.out.println(user.descriere());
 
-        User user= controllUser.getCelMaiVarsnic();
+       // User user= controllUser.getCelMaiVarsnic();
 
+        //System.out.println(user.descriere());
 
-        System.out.println(user.descriere());
-
-
-
-
-
-
-
-
+    ControllPescuit controllPescuit = new ControllPescuit();
+    controllPescuit.load();
+    //controllPescuit.afisarePescari();
+        controllPescuit.
 
     }
 
