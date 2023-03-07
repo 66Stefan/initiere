@@ -28,7 +28,7 @@ public class ControllPescuit {
 
         Pescuit pescar3 = new Pescuit();
 
-        pescar3.denechipament = "Geanta Pescuit";
+        pescar3.denechipament = "12";
         pescar3.folositPentru = "Bagaj";
         pescar3.pret = 1;
         pescar3.cantitate = 1234;
@@ -57,18 +57,30 @@ public class ControllPescuit {
 
             System.out.println(pescuit.get(i).afisarePescuit());
         }
+    }
+    //todo: metoda ce afisaza toate produsele ce sunt mai scummpe decat bani
 
-        //todo: metoda ce afisaza toate produsele ce sunt mai scummpe decat "bani"
-        public void afisareMaiScumpDupa(int lei){
+    public void afisareMaiScumpDupa(int lei) {
 
-            for (int i = 0; i < pescuit.size(); i++) {
-                if ((pescuit.get(i).pret) > lei) {
-                    System.out.println(pescuit.get(i).afisarePescuit());
-                }
+        for (int i = 0; i < pescuit.size(); i++) {
+            if ((pescuit.get(i).pret) > lei) {
+                System.out.println(pescuit.get(i).afisarePescuit());
             }
-
-
         }
 
-
     }
+
+
+    public Pescuit afisareDupaDenumireEchipament(String echipament){
+
+        for(int i=0; i<pescuit.size();i++){
+            if((pescuit.get(i).denechipament.equals(echipament))){
+                return  pescuit.get(i);
+            }
+        }
+        return null;
+    }
+
+
+
+}
