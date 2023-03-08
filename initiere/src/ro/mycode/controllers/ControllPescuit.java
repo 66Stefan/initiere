@@ -37,7 +37,7 @@ public class ControllPescuit {
 
         pescar4.denechipament = "Carlig Somn";
         pescar4.folositPentru = "Pescuit somn";
-        pescar4.pret = 12;
+        pescar4.pret = 5;
         pescar4.cantitate = 23;
 
         pescuit.add(pescar1);
@@ -63,14 +63,14 @@ public class ControllPescuit {
     public void afisareMaiScumpDupa(int lei) {
 
         for (int i = 0; i < pescuit.size(); i++) {
-            if ((pescuit.get(i).pret) > lei) {
+            if ((pescuit.get(i).pret) == lei) {
                 System.out.println(pescuit.get(i).afisarePescuit());
             }
         }
 
     }
 
-
+    //todo: afisare dupa denumirea echipamentului
     public Pescuit afisareDupaDenumireEchipament(String echipament){
 
         for(int i=0; i<pescuit.size();i++){
@@ -80,6 +80,8 @@ public class ControllPescuit {
         }
         return null;
     }
+
+    //todo: afisare dupa un anumit pret
     public Pescuit afisareDupaPret(int pret){
 
         for (int i=0; i<pescuit.size();i++){
@@ -88,6 +90,46 @@ public class ControllPescuit {
             }
         }
         return null;
+    }
+
+    //todo: afisare cel mai ieftin produs
+
+    public Pescuit celMaiIeftinProdus(){
+
+        Pescuit pescuitCelMaiIeftin = this.pescuit.get(0);
+        for(int i=0;i<pescuit.size();i++){
+
+            if(pescuitCelMaiIeftin.pret > pescuit.get(i).pret){
+
+                pescuitCelMaiIeftin=pescuit.get(i);
+            }
+        }
+
+        return pescuitCelMaiIeftin;
+    }
+
+    //todo: produse folosite la ...
+
+    public Pescuit afisareProduseFolositeLa(String folositeLa){
+
+        for( int i=0; i<pescuit.size();i++){
+            if(pescuit.get(i).folositPentru.equals(folositeLa)){
+               return pescuit.get(i);
+
+            }
+        }
+        return null;
+    }
+
+
+    //todo; afisare dupa un stoc
+    public void afisareDupaStoc(int stoc){
+
+        for(int i=0;i<pescuit.size();i++){
+            if((pescuit.get(i).cantitate)>=stoc){
+                System.out.println(pescuit.get(i).afisarePescuit());
+            }
+        }
     }
 
 

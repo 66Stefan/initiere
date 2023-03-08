@@ -36,37 +36,61 @@ public class Main {
 //            System.out.println(users.get(i).descriere());
 //        }
 
-       // ControllUser controllUser= new ControllUser();
+      // ControllUser controllUser= new ControllUser();
 
 
-       // controllUser.load();
+      // controllUser.load();
 
 
-        //controllUser.afisare();
+       // controllUser.afisare();
 
-       // ControllUser controllUser;
+       //ControllUser controllUser;
         //controllUser.afisareDupaAni(22);
        //User user= controllUser.afisareDupaUsername("Sorin Stefan");
 
+       // System.out.println(user.descriere());
+
+       //User users= controllUser.getCelMaiVarsnic();
+
         //System.out.println(user.descriere());
 
-       // User user= controllUser.getCelMaiVarsnic();
 
-        //System.out.println(user.descriere());
 
-    ControllPescuit controllPescuit = new ControllPescuit();
-    controllPescuit.load();
+
+
+   //
     //controllPescuit.afisarePescari();
-         //controllPescuit.afisareMaiScumpDupa(5);
+         //
 
     //controllPescuit.afisareDupaDenumireEchipament("12")  ;
         //controllPescuit.afisareDupaPret(56);
 
 
 
+    afisareContollerpescuit();
+
+
     }
 
+    public static void afisareContollerpescuit(){
 
+
+        ControllPescuit controllPescuit = new ControllPescuit();
+        controllPescuit.load();
+        //controllPescuit.afisarePescari();
+        //controllPescuit.afisareMaiScumpDupa(5);
+        //Pescuit pescar=controllPescuit.afisareDupaPret(56);
+        //Pescuit pescar=controllPescuit.afisareDupaDenumireEchipament("Mulineta");
+        //Pescuit pescar=controllPescuit.celMaiIeftinProdus();
+        //Pescuit pescar=controllPescuit.afisareProduseFolositeLa("Pescuit");
+        //controllPescuit.afisareDupaStoc(4);
+
+
+
+
+       // System.out.println(pescar.afisarePescuit());
+
+    }
     public static void obiectePescuit(){
 
         //creare de obiecte
