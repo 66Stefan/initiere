@@ -77,18 +77,25 @@ public class Main {
 
         ControllPescuit controllPescuit = new ControllPescuit();
         controllPescuit.load();
-        //controllPescuit.afisarePescari();
+        // controllPescuit.afisarePescari();
         //controllPescuit.afisareMaiScumpDupa(5);
         //Pescuit pescar=controllPescuit.afisareDupaPret(56);
         //Pescuit pescar=controllPescuit.afisareDupaDenumireEchipament("Mulineta");
         //Pescuit pescar=controllPescuit.celMaiIeftinProdus();
         //Pescuit pescar=controllPescuit.afisareProduseFolositeLa("Pescuit");
         //controllPescuit.afisareDupaStoc(4);
+        //controllPescuit.afisareCuPretMaiMicSiStocMaiMare(4,5);
+        //Pescuit pescar = controllPescuit.cautaunProdusDupaDenumireSiPret("Mulineta", 54);
+        //Pescuit pescar=controllPescuit.folositPentruStocMaiMareSiPretMaiMic("Pescuit somn", 4, 8 );
 
 
 
 
-       // System.out.println(pescar.afisarePescuit());
+        if( pescar!= null){
+        System.out.println(pescar.afisarePescuit());}
+        else{
+            System.out.println("Va dorim o zi frumoasa!");
+        }
 
     }
     public static void obiectePescuit(){

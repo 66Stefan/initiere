@@ -1,6 +1,6 @@
 package ro.mycode.controllers;
 
-import ro.mycode.controllers.ControllPescuit;
+//import ro.mycode.controllers.ControllPescuit;
 import ro.mycode.models.Pescuit;
 
 import java.util.ArrayList;
@@ -122,7 +122,7 @@ public class ControllPescuit {
     }
 
 
-    //todo; afisare dupa un stoc
+    //todo: afisare dupa un stoc
     public void afisareDupaStoc(int stoc){
 
         for(int i=0;i<pescuit.size();i++){
@@ -132,5 +132,46 @@ public class ControllPescuit {
         }
     }
 
+    //todo: afisare care au pretul mai mic decat si stocul mai mare decat
+
+    public  void afisareCuPretMaiMicSiStocMaiMare(int stoc, int pret){
+
+        for( int i=0; i<pescuit.size(); i++){
+
+            if((pescuit.get(i).pret==pret) && (pescuit.get(i).cantitate>stoc) ){
+                System.out.println(pescuit.get(i).afisarePescuit());
+            }
+        }
+    }
+
+    //todo: cauta un produs dupa: denumire si pret si returneaza-l
+
+    public Pescuit cautaunProdusDupaDenumireSiPret(String nume, int pret){
+
+        for(int i=0; i<pescuit.size();i++){
+
+            if((pescuit.get(i).denechipament.equals(nume)) && (pescuit.get(i).pret==pret)){
+                return pescuit.get(i);
+            }
+        }
+
+        System.out.println("Produsul cu numele : "+nume+" si cu pretul : "+pret+" nu a fost gasit! Multumim de interes!");
+        return null;
+    }
+
+    //todo: afisare produse folosite pentru si cu stoc mai mare si pret mai mic decat....
+
+    public Pescuit folositPentruStocMaiMareSiPretMaiMic(String folosit, int stocmare, int pretMic){
+
+        for(int i=0; i<pescuit.size();i++){
+
+            if((pescuit.get(i).folositPentru.equals(folosit)) && (pescuit.get(i).cantitate>stocmare) && (pescuit.get(i).pret<pretMic)){
+                return pescuit.get(i);
+            }
+        }
+
+
+        return null;
+    }
 
 }
