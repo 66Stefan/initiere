@@ -1,6 +1,8 @@
 package ro.mycode;
 
+import ro.mycode.controllers.ControllEchipaFotbal;
 import ro.mycode.controllers.ControllUser;
+
 import ro.mycode.controllers.ControllPescuit;
 import ro.mycode.models.*;
 
@@ -67,11 +69,35 @@ public class Main {
 
 
 
-    afisareContollerpescuit();
+    //afisareContollerpescuit();
+
+      afisarecontrollerEhipaFotbal();
 
 
     }
 
+
+    public static void afisarecontrollerEhipaFotbal(){
+        ControllEchipaFotbal controllFotbal = new ControllEchipaFotbal();
+        controllFotbal.load();
+
+       EchipaFotbal fotball = controllFotbal.afisareDupaNumeJucator("Carina");
+
+        if (fotball!=null) {
+            System.out.println(fotball.afisareJucator());
+        } else{
+            System.out.println("Nu a fost gasit");
+        }
+
+
+
+
+
+
+
+
+
+    }
     public static void afisareContollerpescuit(){
 
 
@@ -86,7 +112,7 @@ public class Main {
         //controllPescuit.afisareDupaStoc(4);
         //controllPescuit.afisareCuPretMaiMicSiStocMaiMare(4,5);
         //Pescuit pescar = controllPescuit.cautaunProdusDupaDenumireSiPret("Mulineta", 54);
-        //Pescuit pescar=controllPescuit.folositPentruStocMaiMareSiPretMaiMic("Pescuit somn", 4, 8 );
+        Pescuit pescar=controllPescuit.folositPentruStocMaiMareSiPretMaiMic("Pescuit somn", 4, 8 );
 
 
 
