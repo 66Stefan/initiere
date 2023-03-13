@@ -1,9 +1,7 @@
 package ro.mycode;
 
-import ro.mycode.controllers.ControllEchipaFotbal;
-import ro.mycode.controllers.ControllUser;
+import ro.mycode.controllers.*;
 
-import ro.mycode.controllers.ControllPescuit;
 import ro.mycode.models.*;
 
 import java.net.SocketOption;
@@ -69,25 +67,58 @@ public class Main {
 
 
 
-    //afisareContollerpescuit();
+   // afisareContollerpescuit();
 
-      afisarecontrollerEhipaFotbal();
+      //afisarecontrollerEhipaFotbal();
+        //afisareControllerZoo();
+        afisareControllBiblioteca();
 
 
     }
 
+    public static void afisareControllBiblioteca(){
+        ControllBiblioteca controllBiblioteca=new ControllBiblioteca();
+        controllBiblioteca.load();
+
+
+
+
+    }
+    public static void afisareControllerZoo(){
+
+        ControllZoo controllZoo = new ControllZoo();
+        controllZoo.load();
+
+        //Zoo animalZoo=controllZoo.couaterAnimalDupaNume("Tigru");
+        //controllZoo.animaleDinCuscaMaiMareDe5();
+//        Zoo animalZoo=controllZoo.celMaiBatranAnimal();
+//        System.out.println(animalZoo.afisareZoo());
+
+//        if (animalZoo!=null) {
+//            System.out.println(animalZoo.afisareZoo());
+//        } else{
+//            System.out.println("Nu a fost gasit");
+//        }
+
+    }
 
     public static void afisarecontrollerEhipaFotbal(){
         ControllEchipaFotbal controllFotbal = new ControllEchipaFotbal();
         controllFotbal.load();
 
-       EchipaFotbal fotball = controllFotbal.afisareDupaNumeJucator("Carina");
+      // EchipaFotbal fotball = controllFotbal.afisareDupaNumeJucator("Carina");
+       // EchipaFotbal fotball = controllFotbal.afisareDupaNumarTricou(16);
+        //controllFotbal.afiseazaMAiGreuDecat(10);
+        //controllFotbal.fotbalistiAccidentati();
+        //controllFotbal.neaccidentatiSiMaiSlabiDe80();
 
-        if (fotball!=null) {
-            System.out.println(fotball.afisareJucator());
-        } else{
-            System.out.println("Nu a fost gasit");
-        }
+
+//
+//        if (fotball!=null) {
+//            System.out.println(fotball.afisareJucator());
+//        } else{
+//            System.out.println("Nu a fost gasit");
+//        }
 
 
 

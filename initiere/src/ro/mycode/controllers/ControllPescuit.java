@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class ControllPescuit {
 
-    public ArrayList<Pescuit> pescuit = new ArrayList<>();
+    public static ArrayList<Pescuit> pescuit = new ArrayList<>();
 
     public void load() {
 
@@ -71,7 +71,7 @@ public class ControllPescuit {
     }
 
     //todo: afisare dupa denumirea echipamentului
-    public Pescuit afisareDupaDenumireEchipament(String echipament){
+    public static Pescuit afisareDupaDenumireEchipament(String echipament){
 
         for(int i=0; i<pescuit.size();i++){
             if((pescuit.get(i).denechipament.equals(echipament))){
