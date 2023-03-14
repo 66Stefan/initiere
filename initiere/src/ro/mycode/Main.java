@@ -1,7 +1,7 @@
 package ro.mycode;
 
 import ro.mycode.controllers.*;
-
+import  ro.mycode.controllers.ControllFamilie;
 import ro.mycode.models.*;
 
 import java.net.SocketOption;
@@ -67,20 +67,53 @@ public class Main {
 
 
 
-   // afisareContollerpescuit();
+         // afisareContollerpescuit();
+         //afisarecontrollerEhipaFotbal();
+         //afisareControllerZoo();
+         //afisareControllBiblioteca();
+        afisareControlFamilie();
 
-      //afisarecontrollerEhipaFotbal();
-        //afisareControllerZoo();
-        afisareControllBiblioteca();
 
 
+    }
+
+    public static void  afisareControlFamilie(){
+
+        ControllFamilie controllFamilie= new ControllFamilie();
+        controllFamilie.load();
+
+
+        //controllFamilie.afisazaTotiMembriDeSexM();
+       // Familie familie=controllFamilie.celMaiTanarMembru();
+        controllFamilie.afisazatata();
+
+       // System.out.println((familie.afisareFamilie()));
+
+
+//        if (familie!=null) {
+//          System.out.println(familie.afisareFamilie());
+//        } else{
+//            System.out.println("Nu a fost gasit");
+//        }
     }
 
     public static void afisareControllBiblioteca(){
         ControllBiblioteca controllBiblioteca=new ControllBiblioteca();
         controllBiblioteca.load();
 
+        //Biblioteca biblioteca=controllBiblioteca.afisareDupaNumeCarte("Ion");
+        //Biblioteca biblioteca=controllBiblioteca.cartecuCeleMaiMultePagini();
+        //controllBiblioteca.cartiDisponibile();
+        //controllBiblioteca.afisazaCartiIntreDouaIntervale(23,1256);
+        //System.out.println(biblioteca.afisareBiblioteca());
 
+
+//
+//        if (biblioteca!=null) {
+//            System.out.println(biblioteca.afisareBiblioteca());
+//        } else{
+//            System.out.println("Nu a fost gasit");
+//        }
 
 
     }
