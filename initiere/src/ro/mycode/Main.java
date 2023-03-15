@@ -3,7 +3,10 @@ package ro.mycode;
 import ro.mycode.controllers.*;
 import  ro.mycode.controllers.ControllFamilie;
 import ro.mycode.models.*;
+import  ro.mycode.controllers.ControllKarate;
+import ro.mycode.controllers.ControllLocatari;
 
+import ro.mycode.controllers.ControllMagazin;
 import java.net.SocketOption;
 import java.util.ArrayList;
 
@@ -71,7 +74,53 @@ public class Main {
          //afisarecontrollerEhipaFotbal();
          //afisareControllerZoo();
          //afisareControllBiblioteca();
-        afisareControlFamilie();
+        //afisareControlFamilie();
+          //afisareKarate();
+        //afisareLocatari();
+        afisareMagazin();
+
+
+
+    }
+
+
+    public static void afisareMagazin(){
+
+
+
+
+
+
+
+    }
+
+    public static void afisareLocatari(){
+
+        ControllLocatari controlLocatari=new ControllLocatari();
+        controlLocatari.load();
+
+        //Locatari locatar=controlLocatari.ceimaiMultiInApartament();
+       // Locatari locatar= controlLocatari.cautaunNumeFamilieSiNrApartament("Sebastian",9);
+        controlLocatari.afisareDupaNrPersoane(4);
+        controlLocatari.afisareRestantaRegieSiMaiMultDexxPersoane(true, 4);
+
+        //System.out.println(locatar.afisareBloc());
+
+    }
+
+
+
+
+    public static void afisareKarate(){
+        ControllKarate controllKarate = new ControllKarate();
+        controllKarate.load();
+
+        //Karate karate= controllKarate.afisareDupaClub("Puma");
+      //controllKarate.afisareSexFsiMaiMultDe6Medalii("M", 2);
+        Karate karate=controllKarate.afisareSportiviDeSexM();
+
+       //System.out.println(karate.afisareKarate());
+
 
 
 

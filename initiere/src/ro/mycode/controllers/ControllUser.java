@@ -134,7 +134,7 @@ public class ControllUser {
     public User getCelMaiVarsnic() {
 
         User userVarstnic = this.users.get(0);
-        int a = 0;
+
         for (int i = 0; i < users.size(); i++) {
 
 
