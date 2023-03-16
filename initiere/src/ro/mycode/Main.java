@@ -5,6 +5,7 @@ import  ro.mycode.controllers.ControllFamilie;
 import ro.mycode.models.*;
 import  ro.mycode.controllers.ControllKarate;
 import ro.mycode.controllers.ControllLocatari;
+import ro.mycode.controllers.ControllMasina;
 
 import ro.mycode.controllers.ControllMagazin;
 import java.net.SocketOption;
@@ -77,17 +78,41 @@ public class Main {
         //afisareControlFamilie();
           //afisareKarate();
         //afisareLocatari();
-        afisareMagazin();
+        //afisareMagazin();
+        //afisareMasina();
 
 
 
     }
 
+    public static void afisareMasina(){
 
+        ControllMasina controllMasina = new ControllMasina();
+        controllMasina.load();
+
+        //Masina masina=controllMasina.ceaMaiNouaMasina();
+      //controllMasina.afisazaMasiniMaiNoiDeAnul(2001);
+        controllMasina.returneazaDupaNumePropietar("Stefan");
+
+        //System.out.println(masina.afisare());
+
+
+
+    }
     public static void afisareMagazin(){
 
+        ControllMagazin controllerMagazin = new ControllMagazin();
+        controllerMagazin.load();
+
+       // Magazin magazin=controllerMagazin.afisareDupaNumeProdus("CocaCola");
+        //Magazin magazin=controllerMagazin.celMaiScumpProdus();
+       // controllerMagazin.afisazacuAlarmaStorcAdevaratSiStocMaiMicDe10Bucati();
+       controllerMagazin.afiseazaToateProduseleDinRaionul("Bauturi");
 
 
+
+
+    //System.out.println(magazin.afisareMagazin());
 
 
 

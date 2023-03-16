@@ -1,5 +1,6 @@
 package ro.mycode.controllers;
 import ro.mycode.Main;
+import ro.mycode.models.EchipaFotbal;
 import ro.mycode.models.Magazin;
 import java.util.ArrayList;
 public class ControllMagazin {
@@ -24,10 +25,10 @@ public class ControllMagazin {
         primul3.denumireProdus="PacoRabana";
         primul3.pret=567;
         primul3.alarmaStoc=false;
-        primul3.nrBucati=61;
+        primul3.nrBucati=4;
 
-        primul4.raion="Igena";
-        primul4.denumireProdus="Hartie igenica";
+        primul4.raion="Bauturi";
+        primul4.denumireProdus="Vin";
         primul4.pret=49;
         primul4.alarmaStoc=true;
         primul4.nrBucati=1;
@@ -46,7 +47,48 @@ public class ControllMagazin {
     }
 
 
+    public Magazin afisareDupaNumeProdus(String produs){
 
+        for (int i=0; i<magazin.size();i++){
+            if((magazin.get(i).denumireProdus.equals(produs))){
+                return magazin.get(i);
+            }
+        }
+        return null;
+    }
+
+    public Magazin celMaiScumpProdus(){
+
+        Magazin scump= this.magazin.get(0);
+        for(int i=0; i<magazin.size();i++){
+
+            if(scump.pret<magazin.get(i).pret){
+                scump=magazin.get(i);
+            }
+        }
+        return scump;
+    }
+
+    public void afisazacuAlarmaStorcAdevaratSiStocMaiMicDe10Bucati(){
+
+        for(int i=0; i<magazin.size(); i++){
+            if((magazin.get(i).alarmaStoc=true) && (magazin.get(i).nrBucati<10)){
+
+                System.out.println(magazin.get(i).afisareMagazin());
+            }
+         }
+    }
+
+    public void afiseazaToateProduseleDinRaionul(String raion){
+
+        for(int i=0;i<magazin.size();i++){
+
+            if(magazin.get(i).raion.equals(raion)){
+                System.out.println(magazin.get(i).afisareMagazin());
+            }
+        }
+
+    }
 
 
 }
