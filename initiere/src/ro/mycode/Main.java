@@ -1,8 +1,13 @@
 package ro.mycode;
 
-import ro.mycode.controllers.ControllUser;
+import ro.mycode.controllers.*;
+import  ro.mycode.controllers.ControllFamilie;
 import ro.mycode.models.*;
+import  ro.mycode.controllers.ControllKarate;
+import ro.mycode.controllers.ControllLocatari;
+import ro.mycode.controllers.ControllMasina;
 
+import ro.mycode.controllers.ControllMagazin;
 import java.net.SocketOption;
 import java.util.ArrayList;
 
@@ -35,25 +40,192 @@ public class Main {
 //            System.out.println(users.get(i).descriere());
 //        }
 
-        ControllUser controllUser= new ControllUser();
+      // ControllUser controllUser= new ControllUser();
 
 
-        controllUser.load();
+      // controllUser.load();
 
 
+       // controllUser.afisare();
 
-        //controllUser.afisare();
-
-       //controllUser.afisareDupaAni(22);
+       //ControllUser controllUser;
+        //controllUser.afisareDupaAni(22);
        //User user= controllUser.afisareDupaUsername("Sorin Stefan");
 
+       // System.out.println(user.descriere());
+
+       //User users= controllUser.getCelMaiVarsnic();
 
         //System.out.println(user.descriere());
 
-        User user= controllUser.getCelMaiVarsnic();
 
 
-        System.out.println(user.descriere());
+
+
+   //
+    //controllPescuit.afisarePescari();
+         //
+
+    //controllPescuit.afisareDupaDenumireEchipament("12")  ;
+        //controllPescuit.afisareDupaPret(56);
+
+
+
+         // afisareContollerpescuit();
+         //afisarecontrollerEhipaFotbal();
+         //afisareControllerZoo();
+         //afisareControllBiblioteca();
+        //afisareControlFamilie();
+          //afisareKarate();
+        //afisareLocatari();
+        //afisareMagazin();
+        //afisareMasina();
+
+
+
+    }
+
+    public static void afisareMasina(){
+
+        ControllMasina controllMasina = new ControllMasina();
+        controllMasina.load();
+
+        //Masina masina=controllMasina.ceaMaiNouaMasina();
+      //controllMasina.afisazaMasiniMaiNoiDeAnul(2001);
+        controllMasina.returneazaDupaNumePropietar("Stefan");
+
+        //System.out.println(masina.afisare());
+
+
+
+    }
+    public static void afisareMagazin(){
+
+        ControllMagazin controllerMagazin = new ControllMagazin();
+        controllerMagazin.load();
+
+       // Magazin magazin=controllerMagazin.afisareDupaNumeProdus("CocaCola");
+        //Magazin magazin=controllerMagazin.celMaiScumpProdus();
+       // controllerMagazin.afisazacuAlarmaStorcAdevaratSiStocMaiMicDe10Bucati();
+       controllerMagazin.afiseazaToateProduseleDinRaionul("Bauturi");
+
+
+
+
+    //System.out.println(magazin.afisareMagazin());
+
+
+
+
+    }
+
+    public static void afisareLocatari(){
+
+        ControllLocatari controlLocatari=new ControllLocatari();
+        controlLocatari.load();
+
+        //Locatari locatar=controlLocatari.ceimaiMultiInApartament();
+       // Locatari locatar= controlLocatari.cautaunNumeFamilieSiNrApartament("Sebastian",9);
+        controlLocatari.afisareDupaNrPersoane(4);
+        controlLocatari.afisareRestantaRegieSiMaiMultDexxPersoane(true, 4);
+
+        //System.out.println(locatar.afisareBloc());
+
+    }
+
+
+
+
+    public static void afisareKarate(){
+        ControllKarate controllKarate = new ControllKarate();
+        controllKarate.load();
+
+        //Karate karate= controllKarate.afisareDupaClub("Puma");
+      //controllKarate.afisareSexFsiMaiMultDe6Medalii("M", 2);
+        Karate karate=controllKarate.afisareSportiviDeSexM();
+
+       //System.out.println(karate.afisareKarate());
+
+
+
+
+    }
+
+    public static void  afisareControlFamilie(){
+
+        ControllFamilie controllFamilie= new ControllFamilie();
+        controllFamilie.load();
+
+
+        //controllFamilie.afisazaTotiMembriDeSexM();
+       // Familie familie=controllFamilie.celMaiTanarMembru();
+        controllFamilie.afisazatata();
+
+       // System.out.println((familie.afisareFamilie()));
+
+
+//        if (familie!=null) {
+//          System.out.println(familie.afisareFamilie());
+//        } else{
+//            System.out.println("Nu a fost gasit");
+//        }
+    }
+
+    public static void afisareControllBiblioteca(){
+        ControllBiblioteca controllBiblioteca=new ControllBiblioteca();
+        controllBiblioteca.load();
+
+        //Biblioteca biblioteca=controllBiblioteca.afisareDupaNumeCarte("Ion");
+        //Biblioteca biblioteca=controllBiblioteca.cartecuCeleMaiMultePagini();
+        //controllBiblioteca.cartiDisponibile();
+        //controllBiblioteca.afisazaCartiIntreDouaIntervale(23,1256);
+        //System.out.println(biblioteca.afisareBiblioteca());
+
+
+//
+//        if (biblioteca!=null) {
+//            System.out.println(biblioteca.afisareBiblioteca());
+//        } else{
+//            System.out.println("Nu a fost gasit");
+//        }
+
+
+    }
+    public static void afisareControllerZoo(){
+
+        ControllZoo controllZoo = new ControllZoo();
+        controllZoo.load();
+
+        //Zoo animalZoo=controllZoo.couaterAnimalDupaNume("Tigru");
+        //controllZoo.animaleDinCuscaMaiMareDe5();
+//        Zoo animalZoo=controllZoo.celMaiBatranAnimal();
+//        System.out.println(animalZoo.afisareZoo());
+
+//        if (animalZoo!=null) {
+//            System.out.println(animalZoo.afisareZoo());
+//        } else{
+//            System.out.println("Nu a fost gasit");
+//        }
+
+    }
+
+    public static void afisarecontrollerEhipaFotbal(){
+        ControllEchipaFotbal controllFotbal = new ControllEchipaFotbal();
+        controllFotbal.load();
+
+      // EchipaFotbal fotball = controllFotbal.afisareDupaNumeJucator("Carina");
+       // EchipaFotbal fotball = controllFotbal.afisareDupaNumarTricou(16);
+        //controllFotbal.afiseazaMAiGreuDecat(10);
+        //controllFotbal.fotbalistiAccidentati();
+        //controllFotbal.neaccidentatiSiMaiSlabiDe80();
+
+
+//
+//        if (fotball!=null) {
+//            System.out.println(fotball.afisareJucator());
+//        } else{
+//            System.out.println("Nu a fost gasit");
+//        }
 
 
 
@@ -64,8 +236,32 @@ public class Main {
 
 
     }
+    public static void afisareContollerpescuit(){
 
 
+        ControllPescuit controllPescuit = new ControllPescuit();
+        controllPescuit.load();
+        // controllPescuit.afisarePescari();
+        //controllPescuit.afisareMaiScumpDupa(5);
+        //Pescuit pescar=controllPescuit.afisareDupaPret(56);
+        //Pescuit pescar=controllPescuit.afisareDupaDenumireEchipament("Mulineta");
+        //Pescuit pescar=controllPescuit.celMaiIeftinProdus();
+        //Pescuit pescar=controllPescuit.afisareProduseFolositeLa("Pescuit");
+        //controllPescuit.afisareDupaStoc(4);
+        //controllPescuit.afisareCuPretMaiMicSiStocMaiMare(4,5);
+        //Pescuit pescar = controllPescuit.cautaunProdusDupaDenumireSiPret("Mulineta", 54);
+        Pescuit pescar=controllPescuit.folositPentruStocMaiMareSiPretMaiMic("Pescuit somn", 4, 8 );
+
+
+
+
+        if( pescar!= null){
+        System.out.println(pescar.afisarePescuit());}
+        else{
+            System.out.println("Va dorim o zi frumoasa!");
+        }
+
+    }
     public static void obiectePescuit(){
 
         //creare de obiecte

@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 public class ControllUser {
 
-    public ArrayList<User> users = new ArrayList<>();
+    public static ArrayList<User> users = new ArrayList<>();
 
 
-    public void load() {
+    public static void load() {
 
         User user1 = new User();
 
@@ -134,7 +134,7 @@ public class ControllUser {
     public User getCelMaiVarsnic() {
 
         User userVarstnic = this.users.get(0);
-        int a = 0;
+
         for (int i = 0; i < users.size(); i++) {
 
 
