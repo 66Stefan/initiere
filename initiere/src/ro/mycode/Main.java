@@ -80,10 +80,52 @@ public class Main {
             //constructoriNecesarScoala();
            //constructoriMasina();
             //constructoriMagazin();
-            constructoriLocatari();
+            //constructoriLocatari();
+            //constructoriKarate();
+            //constructoriFamilie();
+            //constructoriEchipaFotbal();
+            constructoriBiblioteca();
 
     }
     //todo: constructori, get si set
+
+    public  static  void constructoriBiblioteca(){
+        Biblioteca carte = new Biblioteca("Ion", "Alecsandri", 251, true,150);
+        System.out.println(carte.afisareBiblioteca());
+
+        Biblioteca carte1= new Biblioteca();
+        carte1.setNrPagini(2568);
+        System.out.println(carte1.getNrPagini());
+
+    }
+
+    public static void constructoriEchipaFotbal(){
+
+        EchipaFotbal sportiv= new EchipaFotbal("Hagi", 165,80, 11, false);
+        System.out.println(sportiv.afisareJucator());
+
+        EchipaFotbal fotbalist= new EchipaFotbal();
+        fotbalist.setNumeJucator("Hagi");
+        System.out.println(fotbalist.getNumeJucator());
+    }
+
+    public static void constructoriFamilie(){
+        Familie membru= new Familie("Aurel", "temisan","Socru",25, "M");
+        System.out.println(membru.afisareFamilie());
+
+        Familie membru3=new Familie();
+
+        membru3.setSex("F");
+        System.out.println(membru3.getSex());
+    }
+    public static void constructoriKarate(){
+        Karate karatist= new Karate("Alina", "F", "Alba", 4, "Puma");
+        System.out.println(karatist.afisareKarate());
+
+        Karate altsportiv= new Karate();
+        altsportiv.setCuloareCentura("Alb");
+        System.out.println(altsportiv.getCuloareCentura());
+    }
 
     public  static void constructoriLocatari(){
 
@@ -235,31 +277,31 @@ public class Main {
     }
 
 
-    public static void afisareKarate() {
-        ControllKarate controllKarate = new ControllKarate();
-        controllKarate.load();
-
-        //Karate karate= controllKarate.afisareDupaClub("Puma");
-        //controllKarate.afisareSexFsiMaiMultDe6Medalii("M", 2);
-        Karate karate = controllKarate.afisareSportiviDeSexM();
-
-        //System.out.println(karate.afisareKarate());
-
-
-    }
-
-    public static void afisareControlFamilie() {
-
-        ControllFamilie controllFamilie = new ControllFamilie();
-        controllFamilie.load();
-
-
-        //controllFamilie.afisazaTotiMembriDeSexM();
-        // Familie familie=controllFamilie.celMaiTanarMembru();
-        controllFamilie.afisazatata();
-
-        // System.out.println((familie.afisareFamilie()));
-
+//    public static void afisareKarate() {
+//        ControllKarate controllKarate = new ControllKarate();
+//        controllKarate.load();
+//
+//        //Karate karate= controllKarate.afisareDupaClub("Puma");
+//        //controllKarate.afisareSexFsiMaiMultDe6Medalii("M", 2);
+//        Karate karate = controllKarate.afisareSportiviDeSexM();
+//
+//        //System.out.println(karate.afisareKarate());
+//
+//
+//    }
+//
+//    public static void afisareControlFamilie() {
+//
+//        ControllFamilie controllFamilie = new ControllFamilie();
+//        controllFamilie.load();
+//
+//
+//        //controllFamilie.afisazaTotiMembriDeSexM();
+//        // Familie familie=controllFamilie.celMaiTanarMembru();
+//        controllFamilie.afisazatata();
+//
+//        // System.out.println((familie.afisareFamilie()));
+//
 
 //        if (familie!=null) {
 //          System.out.println(familie.afisareFamilie());
@@ -268,9 +310,9 @@ public class Main {
 //        }
     }
 
-    public static void afisareControllBiblioteca() {
-        ControllBiblioteca controllBiblioteca = new ControllBiblioteca();
-        controllBiblioteca.load();
+//    public static void afisareControllBiblioteca() {
+//        ControllBiblioteca controllBiblioteca = new ControllBiblioteca();
+//        controllBiblioteca.load();
 
         //Biblioteca biblioteca=controllBiblioteca.afisareDupaNumeCarte("Ion");
         //Biblioteca biblioteca=controllBiblioteca.cartecuCeleMaiMultePagini();
@@ -287,65 +329,65 @@ public class Main {
 //        }
 
 
-    }
-
-    public static void afisareControllerZoo() {
-
-        ControllZoo controllZoo = new ControllZoo();
-//        controllZoo.load();
-
-        //Zoo animalZoo=controllZoo.couaterAnimalDupaNume("Tigru");
-        //controllZoo.animaleDinCuscaMaiMareDe5();
-//        Zoo animalZoo=controllZoo.celMaiBatranAnimal();
-//        System.out.println(animalZoo.afisareZoo());
-
-//        if (animalZoo!=null) {
-//            System.out.println(animalZoo.afisareZoo());
-//        } else{
-//            System.out.println("Nu a fost gasit");
-//        }
-
-    }
-
-    public static void afisarecontrollerEhipaFotbal() {
-        ControllEchipaFotbal controllFotbal = new ControllEchipaFotbal();
-        controllFotbal.load();
-
-        // EchipaFotbal fotball = controllFotbal.afisareDupaNumeJucator("Carina");
-        // EchipaFotbal fotball = controllFotbal.afisareDupaNumarTricou(16);
-        //controllFotbal.afiseazaMAiGreuDecat(10);
-        //controllFotbal.fotbalistiAccidentati();
-        //controllFotbal.neaccidentatiSiMaiSlabiDe80();
-
-
-//
-//        if (fotball!=null) {
-//            System.out.println(fotball.afisareJucator());
-//        } else{
-//            System.out.println("Nu a fost gasit");
-//        }
-
-
 //    }
-//    public static void afisareContollerpescuit(){
+
+//    public static void afisareControllerZoo() {
+//
+//        ControllZoo controllZoo = new ControllZoo();
+////        controllZoo.load();
+//
+//        //Zoo animalZoo=controllZoo.couaterAnimalDupaNume("Tigru");
+//        //controllZoo.animaleDinCuscaMaiMareDe5();
+////        Zoo animalZoo=controllZoo.celMaiBatranAnimal();
+////        System.out.println(animalZoo.afisareZoo());
+//
+////        if (animalZoo!=null) {
+////            System.out.println(animalZoo.afisareZoo());
+////        } else{
+////            System.out.println("Nu a fost gasit");
+////        }
+//
+//    }
+//
+//    public static void afisarecontrollerEhipaFotbal() {
+//        ControllEchipaFotbal controllFotbal = new ControllEchipaFotbal();
+//        controllFotbal.load();
+//
+//        // EchipaFotbal fotball = controllFotbal.afisareDupaNumeJucator("Carina");
+//        // EchipaFotbal fotball = controllFotbal.afisareDupaNumarTricou(16);
+//        //controllFotbal.afiseazaMAiGreuDecat(10);
+//        //controllFotbal.fotbalistiAccidentati();
+//        //controllFotbal.neaccidentatiSiMaiSlabiDe80();
 //
 //
-//        ControllPescuit controllPescuit = new ControllPescuit();
-//        controllPescuit.load();
-//        // controllPescuit.afisarePescari();
-//        //controllPescuit.afisareMaiScumpDupa(5);
-//        //Pescuit pescar=controllPescuit.afisareDupaPret(56);
-//        //Pescuit pescar=controllPescuit.afisareDupaDenumireEchipament("Mulineta");
-//        //Pescuit pescar=controllPescuit.celMaiIeftinProdus();
-//        //Pescuit pescar=controllPescuit.afisareProduseFolositeLa("Pescuit");
-//        //controllPescuit.afisareDupaStoc(4);
-//        //controllPescuit.afisareCuPretMaiMicSiStocMaiMare(4,5);
-//        //Pescuit pescar = controllPescuit.cautaunProdusDupaDenumireSiPret("Mulineta", 54);
-//        Pescuit pescar=controllPescuit.folositPentruStocMaiMareSiPretMaiMic("Pescuit somn", 4, 8 );
+////
+////        if (fotball!=null) {
+////            System.out.println(fotball.afisareJucator());
+////        } else{
+////            System.out.println("Nu a fost gasit");
+////        }
 //
 //
-//
-//
+////    }
+////    public static void afisareContollerpescuit(){
+////
+////
+////        ControllPescuit controllPescuit = new ControllPescuit();
+////        controllPescuit.load();
+////        // controllPescuit.afisarePescari();
+////        //controllPescuit.afisareMaiScumpDupa(5);
+////        //Pescuit pescar=controllPescuit.afisareDupaPret(56);
+////        //Pescuit pescar=controllPescuit.afisareDupaDenumireEchipament("Mulineta");
+////        //Pescuit pescar=controllPescuit.celMaiIeftinProdus();
+////        //Pescuit pescar=controllPescuit.afisareProduseFolositeLa("Pescuit");
+////        //controllPescuit.afisareDupaStoc(4);
+////        //controllPescuit.afisareCuPretMaiMicSiStocMaiMare(4,5);
+////        //Pescuit pescar = controllPescuit.cautaunProdusDupaDenumireSiPret("Mulineta", 54);
+////        Pescuit pescar=controllPescuit.folositPentruStocMaiMareSiPretMaiMic("Pescuit somn", 4, 8 );
+////
+////
+////
+////
 //        if( pescar!= null){
 //        System.out.println(pescar.afisarePescuit());}
 //        else{
@@ -655,5 +697,5 @@ public class Main {
 //        System.out.println(pahere2.descriere());
 //        System.out.println(fane.descriere());
 //    }
-    }
-}
+//    }
+//}

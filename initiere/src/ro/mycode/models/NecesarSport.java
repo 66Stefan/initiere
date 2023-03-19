@@ -4,9 +4,9 @@ public class NecesarSport {
     //declarare atribute
 
     private String denEchipament;
-    public String marimea;
+    private String marimea;
     private String material;
-    public Boolean esential;
+    private Boolean esential;
     private String culoare;
 
     //todo: creare constructori
@@ -64,6 +64,29 @@ public class NecesarSport {
         }
     }
 
+    public  String getMarimea(){
+        return  this.marimea;
+    }
+
+    public  void  setMarimea(String marimea){
+        if(marimea.equals("XS")){
+            System.out.println("Aceasta marime nu mai exista");
+        }else {
+            this.marimea=marimea;
+        }
+    }
+
+    public  Boolean getEsential(){
+        return  this.esential;
+    }
+
+    public void setEsential(Boolean esential){
+        if(esential==false){
+            System.out.println("Specificati de ce nu este esential");
+        }else{
+            this.esential=esential;
+        }
+    }
     //afisare
 
     public String afisareNecesar(){

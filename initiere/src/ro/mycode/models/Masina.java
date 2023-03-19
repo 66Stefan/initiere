@@ -4,12 +4,12 @@ public class Masina {
 
     //atribute
 
-    public String model;
+    private String model;
     private String marca;
     private int anFabricatie;
-    public String nrImatriculare;
+    private String nrImatriculare;
     private int expiraITP;
-    public String numePropietar;
+    private String numePropietar;
 
 
     //todo: constructori
@@ -69,6 +69,43 @@ public class Masina {
         }else{
             this.expiraITP=expiraITP;
         }
+    }
+
+    public  String getModel(){
+        return this.model;
+    }
+
+    public void setModel(String model){
+        if(model.equals("Audi")){
+            System.out.println("Trebuie rechemat in service");
+        }else{
+            this.model=model;
+        }
+    }
+
+    public  String getNrImatriculare(){
+        return  this.nrImatriculare;
+    }
+
+    public void setNrImatriculare(String nrImatriculare){
+        if(nrImatriculare.equals("2325")){
+            System.out.println("Nr este rezervat");
+        }else{
+            this.nrImatriculare=nrImatriculare;
+        }
+    }
+
+
+    public  String getNumePropietar(){
+        return  this.numePropietar;
+    }
+
+    public void setNumePropietar(String  numePropietar){
+    if(numePropietar.equals("Alin")) {
+        System.out.println("Mai are de platit restante");
+    }else{
+        this.numePropietar=numePropietar;
+    }
     }
 
     //todo: metoda ce returneaza un string

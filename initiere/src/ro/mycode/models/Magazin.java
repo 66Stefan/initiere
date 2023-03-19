@@ -3,10 +3,10 @@ package ro.mycode.models;
 public class Magazin {
     //declarare atribute
 
-    public String denumireProdus;
+    private String denumireProdus;
     private int nrBucati;
     private int pret;
-    public String raion;
+    private String raion;
     private Boolean alarmaStoc;
 
 
@@ -64,6 +64,32 @@ public class Magazin {
             this.alarmaStoc=alarmaStoc;
         }
     }
+
+    public String getDenumireProdus(){
+        return  this.denumireProdus;
+    }
+
+    public  void setDenumireProdus(String  denumireProdus) {
+        if (denumireProdus.equals("Cartofi")) {
+            System.out.println(("nu sunt pe stoc"));
+        } else {
+            this.denumireProdus=denumireProdus;
+        }
+    }
+
+
+    public  String getRaion(){
+        return  this.raion;
+    }
+
+    public void setRaion(String raion){
+        if(raion.equals("Carne")){
+            System.out.println("Atentie la termenul de expirare");
+        }else{
+            this.raion=raion;
+        }
+    }
+
 
     //todo: afisare
     public String afisareMagazin(){

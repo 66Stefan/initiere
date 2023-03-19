@@ -2,11 +2,11 @@ package ro.mycode.models;
 
 public class Locatari {
     //atribuire
-    public String  nume;
+    private String  nume;
     private String prenume;
     private int nrApartament;
     private int nrPersoaneCareLocuiescInApartament;
-    public Boolean restantaRegie;
+    private Boolean restantaRegie;
 
 
     //todo: constructori
@@ -68,7 +68,30 @@ public class Locatari {
         }
     }
 
+    public String getNume(){
+        return  this.nume;
+    }
 
+    public void setNume(String  nume){
+        if(nume.equals("Daniel")){
+            System.out.println("Numele nu este aloct eroare ");
+        }else{
+            this.nume=nume;
+        }
+    }
+
+
+    public Boolean getRestantaRegie(){
+        return  this.restantaRegie;
+    }
+
+    public  void setRestantaRegie( Boolean restantaRegie) {
+        if (restantaRegie == true) {
+            System.out.println("Trebuie sa iti platesti regia");
+        } else {
+            this.restantaRegie = restantaRegie;
+        }
+    }
     //todo:metoda ce returneaza un string
 
     public String afisareBloc(){

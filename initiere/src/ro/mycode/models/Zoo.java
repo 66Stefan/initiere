@@ -6,9 +6,9 @@ public class Zoo {
 
     private String numeAnimal;
     private String ceMananca;
-    public String stareaDeSanatate;
+    private String stareaDeSanatate;
     private int nrCusca;
-    public int varsta;
+    private int varsta;
 
     //todo: accesorii get si set
 
@@ -50,7 +50,29 @@ public class Zoo {
         }
     }
 
+    public  String getStareaDeSanatate(){
+        return this.stareaDeSanatate;
+    }
 
+    public void setStareaDeSanatate(String  stareaDeSanatate){
+        if(stareaDeSanatate.equals("Bolnav")){
+            System.out.println("Trebuie chemat repede medicul");
+        } else{
+            this.stareaDeSanatate=stareaDeSanatate;
+        }
+    }
+
+    public  int getvarsta(){
+        return  this.varsta;
+    }
+
+    public void setvarsta(int varsta){
+        if(varsta==0){
+            System.out.println("Animalul nu are voie sa aiba varzta 0");
+        }else{
+            this.varsta=varsta;
+        }
+    }
 
         //todo: constructori
 

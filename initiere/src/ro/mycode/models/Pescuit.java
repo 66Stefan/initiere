@@ -3,7 +3,7 @@ package ro.mycode.models;
 public class Pescuit {
 
     //declarare atribute
-    public String denechipament;
+    private String denechipament;
     private int pret;
     private int cantitate;
 
@@ -65,6 +65,18 @@ public class Pescuit {
             this.cantitate=cantitate;
         }
         }
+
+        public  String getDenechipament(){
+        return  this.denechipament;
+        }
+
+    public void setDenechipament(String denechipament) {
+        if (denechipament.equals("Undita")) {
+            System.out.println("Trebuie specificata inaltimea");
+        } else {
+            this.denechipament = denechipament;
+        }
+    }
     public String afisarePescuit(){
 
         String text="";
