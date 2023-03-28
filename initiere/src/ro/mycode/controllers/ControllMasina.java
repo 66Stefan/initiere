@@ -39,4 +39,41 @@ public class ControllMasina {
      }
     }
 
+    //todo: filtreaza dupa model
+
+    public ArrayList<Masina> filterByModel(String model){
+     ArrayList<Masina> filter = new ArrayList<>();
+     for(int i=0;i<masina.size();i++){
+         if(masina.get(i).getModel().equals(model)){
+             filter.add(masina.get(i));
+         }
+     }
+     return  filter;
+    }
+
+    //todo: filtreaza dupa anul fabricatiei
+
+    public ArrayList<Masina> sortByYear(int year){
+     ArrayList<Masina> filter = new ArrayList<>();
+     for(int i=0; i<masina.size();i++){
+         if(masina.get(i).getanFabricatie()>year){
+             filter.add(masina.get(i));
+
+         }
+     }
+     return  filter;
+    }
+
+    //todo: filter dupa expirare itp
+    public ArrayList<Masina> sortByItp(int anITP){
+     ArrayList<Masina> filter = new ArrayList<>();
+     for(int i=0; i<masina.size();i++){
+         if(((masina.get(i).getexpiraITP())>anITP)){
+             filter.add(masina.get(i));
+         }
+     }
+     return  filter;
+    }
+
+
 }

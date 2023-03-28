@@ -33,7 +33,30 @@ public class ControllNecesarScoala {
         }
     }
 
+    //todo: filtru dupa numar bucati de scris
 
+
+    public ArrayList<NecesarScoala> sortByNrBucatiInsDeScris(int scris) {
+        ArrayList<NecesarScoala> filter = new ArrayList<>();
+        for (int i = 0; i < scoala.size(); i++) {
+            if ((scoala.get(i).getnrBucatiInstrDeScris()) < scris){
+                filter.add(scoala.get(i));
+            }
+        }
+        return filter;
+    }
+
+    //todo: filtru dupa caiet si nr de bucati
+
+    public ArrayList<NecesarScoala> sortByCaietAndNumber(String caiet, int number){
+        ArrayList<NecesarScoala> filter = new ArrayList<>();
+        for(int i=0; i<scoala.size();i++){
+            if((scoala.get(i).getCaiet().equals(caiet)) && (scoala.get(i).getnrBucati()>number)){
+                filter.add(scoala.get(i));
+            }
+        }
+        return filter;
+    }
 
 
 

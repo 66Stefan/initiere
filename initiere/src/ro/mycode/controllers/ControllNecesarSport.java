@@ -12,10 +12,10 @@ public class ControllNecesarSport {
 
     public void load(){
 
-        NecesarSport sportiv1 = new NecesarSport("Sort alergat", "XL", "Bumbac", true, "Rosu");
+        NecesarSport sportiv1 = new NecesarSport("Sort ", "XL", "Bumbac", true, "Rosu");
         NecesarSport sportiv2 = new NecesarSport("Geaca ploaie", "XXL", "Fsi", false, "Negru");
         NecesarSport sportiv3 = new NecesarSport("Racheta tenis", "45", "Aliaji metal", true, "Alb");
-        NecesarSport sportiv4 = new NecesarSport("Minge hambal", "2", "Piele", true, "Portocaliu");
+        NecesarSport sportiv4 = new NecesarSport("Sort", "L", "Bumbac", true, "Portocaliu");
 
 
         this.sportiv.add(sportiv1);
@@ -32,4 +32,44 @@ public class ControllNecesarSport {
             System.out.println(sportiv.get(i).afisareNecesar());
         }
     }
+
+    //todo: afisare dupa denEchipament
+
+    public ArrayList<NecesarSport> sortByNecesar(String necesar){
+        ArrayList<NecesarSport> filter = new ArrayList<>();
+        for(int i=0; i<sportiv.size();i++){
+            if(sportiv.get(i).getDenEchipament().equals(necesar)){
+                filter.add(sportiv.get(i));
+            }
+        }
+        return  filter;
+    }
+
+    //todo: afisare dupa marime
+
+    public ArrayList<NecesarSport> fiterBySize(String size){
+        ArrayList<NecesarSport> filter = new ArrayList<>();
+        for(int i=0; i<sportiv.size();i++){
+            if(sportiv.get(i).getMarimea().equals(size)){
+                filter.add(sportiv.get(i));
+            }
+        }
+        return filter;
+    }
+
+    //todo: afisare echipamentele care sunt esentale
+
+    public ArrayList<NecesarSport> sortByEsential(Boolean esential){
+        ArrayList<NecesarSport> filter = new ArrayList<>();
+        for( int i=0; i<sportiv.size();i++){
+            if(sportiv.get(i).getEsential()==esential){
+                filter.add(sportiv.get(i));
+            }
+        }
+        return  filter;
+    }
+
+
+
+
 }
