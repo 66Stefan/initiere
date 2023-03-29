@@ -34,4 +34,33 @@ public class ControllFamilie {
             System.out.println(membru.get(i).afisareFamilie());
         }
     }
+    //todo: familie cu acelasi prenume
+    public  ArrayList<Familie> sortByNume( String nume){
+        ArrayList<Familie> filter = new ArrayList<>();
+        for(int i=0;i<membru.size();i++){
+            if(membru.get(i).getNume().equals(nume)){
+                filter.add(membru.get(i));
+            }
+        }
+        return filter;
     }
+    //todo: afiseaza cei care au aceiasi varsta
+
+    public ArrayList<Familie> sortByAge(int age){
+        ArrayList<Familie> filter = new ArrayList<>();
+        for(int i=0;i<membru.size();i++){
+            if((membru.get(i).getVarsata())==age){
+                filter.add(membru.get(i));
+            }
+        }
+        return  filter;
+    }
+
+    }
+
+
+
+
+
+
+

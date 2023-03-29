@@ -35,9 +35,31 @@ public class ControllKarate {
         }
     }
 
+    //todo:afiseaza dupa sex
+
+    public ArrayList<Karate> filterBySex(String sex){
+        ArrayList<Karate> filter = new ArrayList<>();
+        for (int i=0; i<caratist.size();i++){
+            if(caratist.get(i).getSexul().equals(sex)){
+                filter.add(caratist.get(i));
+            }
+        }
+        return filter;
+    }
 
 
 
+    //todo: sorteaza dupa numarul de medalii si centura
+
+    public ArrayList<Karate> sortByMedalieAndCentura(int medalie, String centura){
+        ArrayList<Karate> filter = new ArrayList<>();
+        for(int i=0;i<caratist.size();i++){
+            if((caratist.get(i).getCuloareCentura().equals(centura)) && (caratist.get(i).getNrMedalii()==medalie)){
+                filter.add(caratist.get(i));
+            }
+        }
+        return  filter;
+    }
 
 
 

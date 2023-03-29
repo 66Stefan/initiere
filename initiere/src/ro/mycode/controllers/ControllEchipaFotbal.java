@@ -40,4 +40,29 @@ public class ControllEchipaFotbal {
             }
     }
 
+        //todo: sort dupa greutate si inaltime
+
+    public ArrayList<EchipaFotbal> sortByHightAndWeight(int  weight, int  hight){
+            ArrayList<EchipaFotbal> filter = new ArrayList<>();
+            for(int i=0; i<fotbalist.size();i++){
+                if((fotbalist.get(i).getInaltime()==weight) && (fotbalist.get(i).getGreutate()==hight)){
+                    fotbalist.add(fotbalist.get(i));
+                }
+            }
+            return filter;
+    }
+
+        //todo: afisare dupa inaltime
+
+    public ArrayList<EchipaFotbal> filterBihight(int hight){
+            ArrayList<EchipaFotbal> filter= new ArrayList<>();
+            for(int i=0; i<fotbalist.size();i++){
+                if(fotbalist.get(i).getInaltime()==hight){
+                    filter.add(fotbalist.get(i));
+                }
+            }
+            return filter;
+    }
+
+
 }

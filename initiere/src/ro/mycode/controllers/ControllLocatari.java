@@ -36,6 +36,40 @@ public class ControllLocatari {
         }
     }
 
+    //todo: afisaza locatarii care au restanta la regie
 
+    public ArrayList<Locatari> sortByrestante(Boolean restanta){
+        ArrayList<Locatari> filtre = new ArrayList<>();
+        for(int i=0; i<locatar.size();i++){
+            if(locatar.get(i).getRestantaRegie()==restanta){
+                filtre.add(locatar.get(i));
+            }
+        }
+        return filtre;
+    }
+
+    //todo: afisaza locatarii care locuiesc intr-un interval de apartamente
+
+    public ArrayList<Locatari> sortByApartamentNumber(int min, int max){
+        ArrayList<Locatari> filter = new ArrayList<>();
+        for(int i=0; i<locatar.size();i++){
+            if((locatar.get(i).getnrApartament()>min) && (locatar.get(i).getnrApartament()<max)){
+                filter.add(locatar.get(i));
+            }
+        }
+        return  filter;
+    }
+
+    //todo: filter dupa numarul de persoane
+
+    public ArrayList<Locatari> sortByPersonsNumber(int number){
+        ArrayList<Locatari> filter = new ArrayList<>();
+        for(int i=0; i<locatar.size();i++){
+            if(locatar.get(i).getnrPersoaneCareLocuiescInApartament()>=number){
+                filter.add(locatar.get(i));
+            }
+        }
+        return  filter;
+    }
 
 }

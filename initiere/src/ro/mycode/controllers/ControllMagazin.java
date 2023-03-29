@@ -45,4 +45,23 @@ public class ControllMagazin {
         }
         return  filter;
     }
+
+    //todo: filtreaza dupa numarul de bucati si pret
+    public ArrayList<Magazin> sortByPrigeAndStoc(int pret, int stoc){
+        ArrayList<Magazin> filter = new ArrayList<>();
+        for(int i=0; i<produs.size();i++){
+            if((produs.get(i).getpret()<pret) && (produs.get(i).getnrBucati()>stoc)){
+                filter.add(produs.get(i));
+            }
+        }
+        return  filter;
+    }
+
+
+
+
 }
+
+
+
+
