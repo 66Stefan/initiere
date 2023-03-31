@@ -36,4 +36,29 @@ public class ControllBiblioteca   {
         }
     }
 
+
+    //todo: afia\seaza cartile disponibile
+
+    public ArrayList<Biblioteca> sortByAvailable(Boolean afis){
+        ArrayList<Biblioteca> filter = new ArrayList<>();
+        for(int i=0;i< carte.size();i++)
+        {
+            if(carte.get(i).getDisponibilitate()==afis){
+                filter.add(carte.get(i));
+            }
+        }
+        return  filter;
+    }
+
+    //todo:sort carte dupa nume autor
+
+    public ArrayList<Biblioteca> sortByAuthoreName(String autor){
+        ArrayList<Biblioteca> filter = new ArrayList<>();
+        for(int i=0;i<carte.size();i++){
+            if(carte.get(i).getNumeAutor().equals(autor)){
+                filter.add(carte.get(i));
+            }
+        }
+        return  filter;
+    }
 }
