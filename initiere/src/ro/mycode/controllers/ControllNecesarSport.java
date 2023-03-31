@@ -3,43 +3,73 @@ import  ro.mycode.models.NecesarSport;
 import  java.util.ArrayList;
 public class ControllNecesarSport {
 
-public static ArrayList<NecesarSport> sport = new ArrayList<>();
+    private ArrayList<NecesarSport> sportiv;
 
-//public static void load(){
-//
-//    NecesarSport sport1= new NecesarSport();
-//    NecesarSport sport2= new NecesarSport();
-//    NecesarSport sport3= new NecesarSport();
-//    NecesarSport sport4= new NecesarSport();
-//
-//    sport1.denEchipament="Sort fotbal";
-//    sport1.marimea="M";
-//    sport1.esential=true;
-//    sport1.culoare="Rosu";
-//    sport1.material="Bumbac";
-//
-//    sport1.denEchipament="Ochelari inot";
-//    sport1.marimea="Xl";
-//    sport1.esential=true;
-//    sport1.culoare="Negru";
-//    sport1.material="Plastic si Elastic";
-//
-//    sport1.denEchipament="Trening";
-//    sport1.marimea="L";
-//    sport1.esential=false;
-//    sport1.culoare="Verde";
-//    sport1.material="Lycra";
-//
-//    sport1.denEchipament="Geaca sky";
-//    sport1.marimea="XXL";
-//    sport1.esential=true;
-//    sport1.culoare="Portocaliu";
-//    sport1.material="Impermeabil";
-//
-//    sport.add(sport1);
-//    sport.add(sport2);
-//    sport.add(sport3);
-//    sport.add(sport4);
-//}
+    public ControllNecesarSport(){
+        this.sportiv= new ArrayList<>();
+        this.load();
+    }
+
+    public void load(){
+
+        NecesarSport sportiv1 = new NecesarSport("Sort ", "XL", "Bumbac", true, "Rosu");
+        NecesarSport sportiv2 = new NecesarSport("Geaca ploaie", "XXL", "Fsi", false, "Negru");
+        NecesarSport sportiv3 = new NecesarSport("Racheta tenis", "45", "Aliaji metal", true, "Alb");
+        NecesarSport sportiv4 = new NecesarSport("Sort", "L", "Bumbac", true, "Portocaliu");
+
+
+        this.sportiv.add(sportiv1);
+        this.sportiv.add(sportiv2);
+        this.sportiv.add(sportiv3);
+        this.sportiv.add(sportiv4);
+    }
+
+
+    //todo:afisare
+
+    public void sfisare(){
+        for(int i=0;i<sportiv.size();i++){
+            System.out.println(sportiv.get(i).afisareNecesar());
+        }
+    }
+
+    //todo: afisare dupa denEchipament
+
+    public ArrayList<NecesarSport> sortByNecesar(String necesar){
+        ArrayList<NecesarSport> filter = new ArrayList<>();
+        for(int i=0; i<sportiv.size();i++){
+            if(sportiv.get(i).getDenEchipament().equals(necesar)){
+                filter.add(sportiv.get(i));
+            }
+        }
+        return  filter;
+    }
+
+    //todo: afisare dupa marime
+
+    public ArrayList<NecesarSport> fiterBySize(String size){
+        ArrayList<NecesarSport> filter = new ArrayList<>();
+        for(int i=0; i<sportiv.size();i++){
+            if(sportiv.get(i).getMarimea().equals(size)){
+                filter.add(sportiv.get(i));
+            }
+        }
+        return filter;
+    }
+
+    //todo: afisare echipamentele care sunt esentale
+
+    public ArrayList<NecesarSport> sortByEsential(Boolean esential){
+        ArrayList<NecesarSport> filter = new ArrayList<>();
+        for( int i=0; i<sportiv.size();i++){
+            if(sportiv.get(i).getEsential()==esential){
+                filter.add(sportiv.get(i));
+            }
+        }
+        return  filter;
+    }
+
+
+
 
 }

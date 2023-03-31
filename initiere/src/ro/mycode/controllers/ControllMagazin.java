@@ -4,91 +4,64 @@ import ro.mycode.models.EchipaFotbal;
 import ro.mycode.models.Magazin;
 import java.util.ArrayList;
 public class ControllMagazin {
+    private ArrayList<Magazin> produs;
+
+    public ControllMagazin(){
+        this.produs=new ArrayList<>();
+        this.load();
+    }
 
 
-    public static ArrayList<Magazin> magazin=new ArrayList<>();
+    public void load(){
 
-//    public static void load(){
-//
-//        Magazin primul1= new Magazin();
-//        Magazin primul2= new Magazin();
-//        Magazin primul3= new Magazin();
-//        Magazin primul4= new Magazin();
-//
-//        primul2.raion="Mezeluri";
-//        primul2.denumireProdus="Ceafa de porc";
-//        primul2.pret=23;
-//        primul2.alarmaStoc=true;
-//        primul2.nrBucati=3;
-//
-//        primul3.raion="Parfumuri";
-//        primul3.denumireProdus="PacoRabana";
-//        primul3.pret=567;
-//        primul3.alarmaStoc=false;
-//        primul3.nrBucati=4;
-//
-//        primul4.raion="Bauturi";
-//        primul4.denumireProdus="Vin";
-//        primul4.pret=49;
-//        primul4.alarmaStoc=true;
-//        primul4.nrBucati=1;
-//
-//        primul1.raion="Bauturi";
-//        primul1.denumireProdus="CocaCola";
-//        primul1.pret=5;
-//        primul1.alarmaStoc=false;
-//        primul1.nrBucati=234;
-//
-//
-//        magazin.add(primul1);
-//        magazin.add(primul2);
-//        magazin.add(primul3);
-//        magazin.add(primul4);
-//    }
-//
-//
-//    public Magazin afisareDupaNumeProdus(String produs){
-//
-//        for (int i=0; i<magazin.size();i++){
-//            if((magazin.get(i).denumireProdus.equals(produs))){
-//                return magazin.get(i);
-//            }
-//        }
-//        return null;
-//    }
-//
-//    public Magazin celMaiScumpProdus(){
-//
-//        Magazin scump= this.magazin.get(0);
-//        for(int i=0; i<magazin.size();i++){
-//
-//            if(scump.pret<magazin.get(i).pret){
-//                scump=magazin.get(i);
-//            }
-//        }
-//        return scump;
-//    }
-//
-//    public void afisazacuAlarmaStorcAdevaratSiStocMaiMicDe10Bucati(){
-//
-//        for(int i=0; i<magazin.size(); i++){
-//            if((magazin.get(i).alarmaStoc=true) && (magazin.get(i).nrBucati<10)){
-//
-//                System.out.println(magazin.get(i).afisareMagazin());
-//            }
-//         }
-//    }
-//
-//    public void afiseazaToateProduseleDinRaionul(String raion){
-//
-//        for(int i=0;i<magazin.size();i++){
-//
-//            if(magazin.get(i).raion.equals(raion)){
-//                System.out.println(magazin.get(i).afisareMagazin());
-//            }
-//        }
-//
-//    }
+        Magazin produs1=new Magazin( "Unt", 56, 25, "Lactate", false );
+        Magazin produs2=new Magazin( "Vin", 21, 546, "Alchool", true );
+        Magazin produs3=new Magazin( "Covrig", 332, 4,"Patiserie", false );
+        Magazin produs4=new Magazin( "Bere", 2345, 12, "Alchool", true );
+
+        this.produs.add(produs1);
+        this.produs.add(produs2);
+        this.produs.add(produs3);
+        this.produs.add(produs4);
+    }
+
+    //todo: afisare
+
+    public void afiareMagazin(){
+        for (int i=0; i<produs.size(); i++){
+            System.out.println(produs.get(i).afisareMagazin());
+        }
+
+    }
+
+    //todo: cautare dupa denumire produs
+
+    public ArrayList<Magazin> sortProdus(String denProd){
+        ArrayList<Magazin> filter= new ArrayList<>();
+        for(int i=0;i<produs.size();i++){
+            if(produs.get(i).getDenumireProdus().equals(denProd)){
+                filter.add(produs.get(i));
+            }
+        }
+        return  filter;
+    }
+
+    //todo: filtreaza dupa numarul de bucati si pret
+    public ArrayList<Magazin> sortByPrigeAndStoc(int pret, int stoc){
+        ArrayList<Magazin> filter = new ArrayList<>();
+        for(int i=0; i<produs.size();i++){
+            if((produs.get(i).getpret()<pret) && (produs.get(i).getnrBucati()>stoc)){
+                filter.add(produs.get(i));
+            }
+        }
+        return  filter;
+    }
+
+
 
 
 }
+
+
+
+

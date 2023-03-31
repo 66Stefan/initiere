@@ -3,62 +3,60 @@ import ro.mycode.models.NecesarScoala;
 import java.util.ArrayList;
 public class ControllNecesarScoala {
 
-    public static ArrayList<NecesarScoala> scoala= new ArrayList<>();
+    private ArrayList<NecesarScoala> scoala;
 
-//    public static void load(){
-//
-//
-//        NecesarScoala scoala1 = new NecesarScoala();
-//        NecesarScoala scoala2 = new NecesarScoala();
-//        NecesarScoala scoala3 = new NecesarScoala();
-//        NecesarScoala scoala4 = new NecesarScoala();
-//        NecesarScoala scoala5 =new NecesarScoala();
-//
-//        scoala1.caiet="Mate";
-//        scoala1.modelGhiozdan="Miny";
-//        scoala1.nrBucatiInstrDeScris=23;
-//        scoala1.intrumentDeScris="Creion";
-//        scoala1.nrBucati=33;
-//
-//        scoala2.caiet="Mate";
-//        scoala2.modelGhiozdan="Miny";
-//        scoala2.nrBucatiInstrDeScris=23;
-//        scoala2.intrumentDeScris="Creion";
-//        scoala2.nrBucati=33;
-//
-//        scoala3.caiet="Mate";
-//        scoala3.modelGhiozdan="Miny";
-//        scoala3.nrBucatiInstrDeScris=23;
-//        scoala3.intrumentDeScris="Creion";
-//        scoala3.nrBucati=33;
-//
-//        scoala4.caiet="Mate";
-//        scoala4.modelGhiozdan="Miny";
-//        scoala4.nrBucatiInstrDeScris=23;
-//        scoala4.intrumentDeScris="Creion";
-//        scoala4.nrBucati=33;
-//
-//        scoala5.caiet="Mate";
-//        scoala5.modelGhiozdan="Miny";
-//        scoala5.nrBucatiInstrDeScris=23;
-//        scoala5.intrumentDeScris="Creion";
-//        scoala5.nrBucati=33;
-//
-//
-//        scoala.add(scoala1);
-//        scoala.add(scoala2);
-//        scoala.add(scoala3);
-//        scoala.add(scoala4);
-//        scoala.add(scoala5);
-//
-//
-//
-//
-//
-//    }
+    public ControllNecesarScoala(){
+        this.scoala = new  ArrayList<>();
+        this.load();
+    }
+
+    public void load(){
+
+        NecesarScoala scoala1= new NecesarScoala("Matematica", 56, "Creion", 212, "Pinochio");
+        NecesarScoala scoala2= new NecesarScoala("Desen", 121, "Stilou", 14, "Miny");
+        NecesarScoala scoala3= new NecesarScoala("Biologie", 2, "Carioca", 524, "Troller");
+        NecesarScoala scoala4= new NecesarScoala("Romana tip 1", 22, "Creion mecanic", 111, "Army");
 
 
+        this.scoala.add(scoala1);
+        this.scoala.add(scoala2);
+        this.scoala.add(scoala3);
+        this.scoala.add(scoala4);
+    }
 
+
+        //todo: afisare
+
+    public void afiasareNecesarScoala(){
+        for(int i=0; i<scoala.size();i++){
+            System.out.println(scoala.get(i).afisareScoala());
+        }
+    }
+
+    //todo: filtru dupa numar bucati de scris
+
+
+    public ArrayList<NecesarScoala> sortByNrBucatiInsDeScris(int scris) {
+        ArrayList<NecesarScoala> filter = new ArrayList<>();
+        for (int i = 0; i < scoala.size(); i++) {
+            if ((scoala.get(i).getnrBucatiInstrDeScris()) < scris){
+                filter.add(scoala.get(i));
+            }
+        }
+        return filter;
+    }
+
+    //todo: filtru dupa caiet si nr de bucati
+
+    public ArrayList<NecesarScoala> sortByCaietAndNumber(String caiet, int number){
+        ArrayList<NecesarScoala> filter = new ArrayList<>();
+        for(int i=0; i<scoala.size();i++){
+            if((scoala.get(i).getCaiet().equals(caiet)) && (scoala.get(i).getnrBucati()>number)){
+                filter.add(scoala.get(i));
+            }
+        }
+        return filter;
+    }
 
 
 

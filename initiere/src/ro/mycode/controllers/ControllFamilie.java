@@ -4,81 +4,63 @@ import ro.mycode.models.Familie;
 import java.util.ArrayList;
 public class ControllFamilie {
 
-    public  static ArrayList<Familie> membru= new ArrayList<>();
+    private ArrayList<Familie> membru;
 
-//    public void load(){
-//
-//        Familie membru1 = new Familie();
-//        Familie membru2 = new Familie();
-//        Familie membru3 = new Familie();
-//        Familie membru4 = new Familie();
-//
-//        membru1.nume = "Ionut";
-//        membru1.prenume= "Popescu";
-//        membru1.sex ="M";
-//        membru1.varsata=12;
-//        membru1.rolInFamilie ="Nepot";
-//
-//        membru2.nume = "Mihai";
-//        membru2.prenume= "Vasile";
-//        membru2.sex ="M";
-//        membru2.varsata=45;
-//        membru2.rolInFamilie ="Tata";
-//
-//        membru3.nume = "Ioana";
-//        membru3.prenume= "Paunescu";
-//        membru3.sex ="F";
-//        membru3.varsata=35;
-//        membru3.rolInFamilie ="Mama";
-//
-//        membru4.nume = "Marius";
-//        membru4.prenume= "Popa";
-//        membru4.sex ="M";
-//        membru4.varsata=31;
-//        membru4.rolInFamilie ="Var";
-//
-//
-//
-//        membru.add(membru1);
-//        membru.add(membru2);
-//        membru.add(membru3);
-//        membru.add(membru4);
-//
-//
-//
-//
-//    }
+    public ControllFamilie(){
+
+        this.membru = new ArrayList<>();
+        this.load();
+    }
+
+    public void load(){
+
+        Familie membru1 = new Familie("Traian", "Vuia", "Tata", 54, "M");
+        Familie membru2 = new Familie("Carmen", "Spataru", "Soacra", 81, "F");
+        Familie membru3 = new Familie("Cosmin", "Vuia", "Fiu", 19, "M");
+        Familie membru4 = new Familie("Maria", "Vuia", "Mama", 44, "F");
 
 
-    //todo: afisaza toti memri de sexM
-//    public Familie afisazaTotiMembriDeSexM() {
-//        for (int i = 0; i < membru.size(); i++) {
-//            if (membru.get(i).sex.equals("M")) {
-//                System.out.println(membru.get(i).afisareFamilie());
-//            }
-//        }
-//        return null;
-//    }
-//
-//        //todo: afisaza cel mai tanar membru
-//
-//        public Familie celMaiTanarMembru () {
-//            Familie tanar = this.membru.get(0);
-//
-//            for (int i = 0; i < membru.size(); i++) {
-//                if (membru.get(i).varsata < tanar.varsata) {
-//                    tanar = membru.get(i);
-//                }
-//            }
-//            return tanar;
-//        }
-//
-//        public void afisazatata(){
-//        for(int i=0; i<membru.size();i++){
-//            if(membru.get(i).rolInFamilie.equals("Tata")){
-//                System.out.println(membru.get(i).afisareFamilie());
-//            }
-//        }
-//        }
+        this.membru.add(membru1);
+        this.membru.add(membru2);
+        this.membru.add(membru3);
+        this.membru.add(membru4);
+    }
+
+
+    //todo: afisare
+
+    public void afisareFamilie(){
+        for(int i=0;i<membru.size();i++){
+            System.out.println(membru.get(i).afisareFamilie());
+        }
+    }
+    //todo: familie cu acelasi prenume
+    public  ArrayList<Familie> sortByNume( String nume){
+        ArrayList<Familie> filter = new ArrayList<>();
+        for(int i=0;i<membru.size();i++){
+            if(membru.get(i).getNume().equals(nume)){
+                filter.add(membru.get(i));
+            }
+        }
+        return filter;
+    }
+    //todo: afiseaza cei care au aceiasi varsta
+
+    public ArrayList<Familie> sortByAge(int age){
+        ArrayList<Familie> filter = new ArrayList<>();
+        for(int i=0;i<membru.size();i++){
+            if((membru.get(i).getVarsata())==age){
+                filter.add(membru.get(i));
+            }
+        }
+        return  filter;
+    }
 
     }
+
+
+
+
+
+
+
