@@ -64,7 +64,7 @@ public class ViewNecesarSport {
 
     public void cautareDupaSize(){
         System.out.println("Scrieti marimea");
-       int size = Integer.parseInt(scanner.nextLine());
+       String size= scanner.nextLine();
         ArrayList<NecesarSport> sport = controllNecesarSport.fiterBySize(size);
         for(int i=0; i<sport.size();i++){
             System.out.println(sport.get(i).afisareNecesar());

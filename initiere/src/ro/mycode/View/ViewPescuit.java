@@ -35,16 +35,21 @@ public class ViewPescuit {
             int alegere = Integer.parseInt(scanner.nextLine());
             switch (alegere) {
 
-                case 1:   running = false;
-                break;
-                case 2: controllPescuit.afisarepescuit();
+                case 1:
+                    running = false;
                     break;
-                case 3: cautareDupaPret();
+                case 2:
+                    controllPescuit.afisarepescuit();
                     break;
-                case 4: folositPentu();
+                case 3:
+                    cautareDupaPret();
                     break;
-                case 5: denumireEchipament();
-                break;
+                case 4:
+                    folositPentu();
+                    break;
+                case 5:
+                    denumireEchipament();
+                    break;
                 default:
                     System.out.println("nu ati introdus o valoare din meniu, mai incercati");
 
@@ -53,32 +58,33 @@ public class ViewPescuit {
         }
     }
 
-    public void cautareDupaPret(){
+    public void cautareDupaPret() {
         System.out.println("Scrieti pretul");
         int pret = Integer.parseInt(scanner.nextLine());
-       ArrayList<Pescuit> pescar = controllPescuit.dortAbovePrice(pret);
-        for(int i=0; i<pescar.size();i++){
+        ArrayList<Pescuit> pescar = controllPescuit.dortAbovePrice(pret);
+        for (int i = 0; i < pescar.size(); i++) {
             System.out.println(pescar.get(i).afisarePescuit());
         }
 
     }
 
-    public void folositPentu(){
+    public void folositPentu() {
         System.out.println("Pentru ce este folosit");
         String folosit = scanner.nextLine();
         ArrayList<Pescuit> pescar = controllPescuit.fisteUseFor(folosit);
-        for(int i=0; i<pescar.size();i++){
+        for (int i = 0; i < pescar.size(); i++) {
             System.out.println(pescar.get(i).afisarePescuit());
         }
 
     }
 
-    public void denumireEchipament(){
+    public void denumireEchipament() {
         System.out.println("Denumire echipament");
         String echipament = scanner.nextLine();
         ArrayList<Pescuit> pescar = controllPescuit.filtrareDupaDenumireEchipament(echipament);
-        for(int i=0; i<pescar.size();i++){
+        for (int i = 0; i < pescar.size(); i++) {
             System.out.println(pescar.get(i).afisarePescuit());
         }
 
+    }
 }
