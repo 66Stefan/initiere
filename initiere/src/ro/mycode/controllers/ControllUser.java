@@ -4,7 +4,7 @@ import ro.mycode.models.User;
 
 import java.util.ArrayList;
 
-public class ControllUser {
+public class rollUser {
 
     private ArrayList<User> user;
 
@@ -27,7 +27,7 @@ public class ControllUser {
     }
 
     //todo: afisare
-        public void afisareUser(){
+    public void afisareUser(){
         for (int i=0; i<user.size();i++){
             System.out.println(user.get(i).descriere());
         }
