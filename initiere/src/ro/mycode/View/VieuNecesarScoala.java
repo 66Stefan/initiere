@@ -14,7 +14,7 @@ public class VieuNecesarScoala {
     private ControllNecesarScoala controllNecesarScoala;
     private Scanner scanner;
 
-    public ViewNecesarScoala(){
+    public VieuNecesarScoala(){
         controllNecesarScoala = new ControllNecesarScoala()
         scanner = new Scanner(System.in);
     }
