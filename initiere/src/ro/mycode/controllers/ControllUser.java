@@ -4,7 +4,7 @@ import ro.mycode.models.User;
 
 import java.util.ArrayList;
 
-public class rollUser {
+public class ControllUser {
 
     private ArrayList<User> user;
 
