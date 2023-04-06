@@ -1,5 +1,7 @@
 package ro.mycode;
 
+import ro.mycode.View.ViewUser;
+import ro.mycode.View.ViewZoo;
 import ro.mycode.controllers.*;
 import  ro.mycode.controllers.ControllFamilie;
 import ro.mycode.models.*;
@@ -17,12 +19,12 @@ public class Main {
     public static void main(String[] args) {
 
 
-        ControllZoo animalnou = new ControllZoo();
 
-        ArrayList<Zoo> filter = animalnou.findAnimalEat("Omnivor");
-        for (int i = 0; i < filter.size(); i++) {
-            System.out.println(filter.get(i).afisareZoo());
-        }
 
+        ViewZoo view = new ViewZoo();
+        ViewUser view1 = new ViewUser();
+
+        view.play();
+        view1.play1();
     }
 }

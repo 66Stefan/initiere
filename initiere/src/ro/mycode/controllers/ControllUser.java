@@ -27,7 +27,7 @@ public class ControllUser {
     }
 
     //todo: afisare
-        public void afisareUser(){
+    public void afisareUser(){
         for (int i=0; i<user.size();i++){
             System.out.println(user.get(i).descriere());
         }
